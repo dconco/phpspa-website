@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://phpspa.vercel.app/</loc>
+         <loc>https://phpspa.tech/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/core-concepts/</loc>
+         <loc>https://phpspa.tech/core-concepts/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/installation/</loc>
+         <loc>https://phpspa.tech/installation/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/layout/</loc>
+         <loc>https://phpspa.tech/layout/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/components/</loc>
+         <loc>https://phpspa.tech/components/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/components/advanced-component/</loc>
+         <loc>https://phpspa.tech/components/advanced-component/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/hooks/updating-state-of-mapped-arrays/</loc>
+         <loc>https://phpspa.tech/hooks/updating-state-of-mapped-arrays/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/hooks/use-effect/</loc>
+         <loc>https://phpspa.tech/hooks/use-effect/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/hooks/use-function/</loc>
+         <loc>https://phpspa.tech/hooks/use-function/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/hooks/use-state/</loc>
+         <loc>https://phpspa.tech/hooks/use-state/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/navigations/link-component/</loc>
+         <loc>https://phpspa.tech/navigations/link-component/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/navigations/navigate-component/</loc>
+         <loc>https://phpspa.tech/navigations/navigate-component/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/performance/assets-caching/</loc>
+         <loc>https://phpspa.tech/performance/assets-caching/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/performance/html-compression/</loc>
+         <loc>https://phpspa.tech/performance/html-compression/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/performance/managing-styles-and-scripts/</loc>
+         <loc>https://phpspa.tech/performance/managing-styles-and-scripts/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/references/</loc>
+         <loc>https://phpspa.tech/references/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/references/file-import-utility/</loc>
+         <loc>https://phpspa.tech/references/file-import-utility/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/references/response/</loc>
+         <loc>https://phpspa.tech/references/response/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/requests/</loc>
+         <loc>https://phpspa.tech/requests/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/requests/api-authentication/</loc>
+         <loc>https://phpspa.tech/requests/api-authentication/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/requests/auto-reloading-components/</loc>
+         <loc>https://phpspa.tech/requests/auto-reloading-components/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/requests/client-side-events-and-api/</loc>
+         <loc>https://phpspa.tech/requests/client-side-events-and-api/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/requests/request-object/</loc>
+         <loc>https://phpspa.tech/requests/request-object/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/routing/</loc>
+         <loc>https://phpspa.tech/routing/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/routing/advanced-routing/</loc>
+         <loc>https://phpspa.tech/routing/advanced-routing/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/routing/component-configuration/</loc>
+         <loc>https://phpspa.tech/routing/component-configuration/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/security/content-security-policy/</loc>
+         <loc>https://phpspa.tech/security/content-security-policy/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/security/cors/</loc>
+         <loc>https://phpspa.tech/security/cors/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
-         <loc>https://phpspa.vercel.app/security/csrf-protection/</loc>
+         <loc>https://phpspa.tech/security/csrf-protection/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
 </urlset>

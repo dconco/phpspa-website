@@ -1,30 +1,88 @@
-<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨"><meta name=author content="Dave Conco"><link href=https://phpspa.readthedocs.io/references/response/ rel=canonical><link rel=icon href=../../img/favicon.ico><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.21"><title>Response API Reference - PhpSPA @V2</title><link rel=stylesheet href=../../assets/stylesheets/main.2a3383ac.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><style>:root{.md-tag{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');}}</style><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script><link rel=icon href=../../img/favicon.ico><link rel=icon type=image/png sizes=32x32 href=../../img/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=../../img/favicon-16x16.png><link rel=apple-touch-icon sizes=192x192 href=../../img/android-chrome-192x192.png><meta name=theme-color content=#764ba2><meta name=description content="PhpSPA Documentation - A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨"><meta name=keywords content="PhpSPA, PHP, SPA, MPA, Multi-Page Application, Single Page Application, PHP Framework, Component-based, Routing, State Management, CSRF Protection"><meta name=author content="Dave Conco"><meta name=viewport content="width=device-width, initial-scale=1.0"><meta property=og:type content=website><meta content=https://phpspa.readthedocs.io/ property=og:url><meta property=og:title content="PhpSPA Documentation - Build React-like UIs in Pure PHP"><meta property=og:description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨"><meta property=og:image content=../../img/android-chrome-192x192.png><meta property=twitter:card content=summary_large_image><meta content=https://phpspa.readthedocs.io/ property=twitter:url><meta property=twitter:title content="PhpSPA Documentation - Build React-like UIs in Pure PHP"><meta property=twitter:description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨"><meta property=twitter:image content=../../img/android-chrome-192x192.png><meta name=robots content="index, follow"><meta name=language content=English><meta name=revisit-after content="7 days"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><style>
+<!doctype html>
+<html lang=en class=no-js>
+
+<head>
+   <meta charset=utf-8>
+   <meta name=viewport content="width=device-width,initial-scale=1">
+   <meta name=description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨">
+   <meta name=author content="Dave Conco">
+   <link href=https://phpspa.tech/references/response/ rel=canonical>
+   <link rel=icon href=../../img/favicon.ico>
+   <meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+   <title>Response API Reference - PhpSPA @V2</title>
+   <link rel=stylesheet href=../../assets/stylesheets/main.2a3383ac.min.css>
+   <link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css>
+   <style>
+      :root {
+         .md-tag {
+            --md-tag-icon: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7.75%206.5a1.25%201.25%200%201%200%200%202.5%201.25%201.25%200%200%200%200-2.5%22/%3E%3Cpath%20d%3D%22M2.5%201h8.44a1.5%201.5%200%200%201%201.06.44l10.25%2010.25a1.5%201.5%200%200%201%200%202.12l-8.44%208.44a1.5%201.5%200%200%201-2.12%200L1.44%2012A1.5%201.5%200%200%201%201%2010.94V2.5A1.5%201.5%200%200%201%202.5%201m0%201.5v8.44l10.25%2010.25%208.44-8.44L10.94%202.5Z%22/%3E%3C/svg%3E');
+         }
+      }
+   </style>
+   <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+   <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+   <style>
+      :root {
+         --md-text-font: "Inter";
+         --md-code-font: "JetBrains Mono"
+      }
+   </style>
+   <script>__md_scope = new URL("../..", location), __md_hash = e => [...e].reduce(((e, _) => (e << 5) - e + _.charCodeAt(0)), 0), __md_get = (e, _ = localStorage, t = __md_scope) => JSON.parse(_.getItem(t.pathname + "." + e)), __md_set = (e, _, t = localStorage, a = __md_scope) => { try { t.setItem(a.pathname + "." + e, JSON.stringify(_)) } catch (e) { } }</script>
+   <link rel=icon href=../../img/favicon.ico>
+   <link rel=icon type=image/png sizes=32x32 href=../../img/favicon-32x32.png>
+   <link rel=icon type=image/png sizes=16x16 href=../../img/favicon-16x16.png>
+   <link rel=apple-touch-icon sizes=192x192 href=../../img/android-chrome-192x192.png>
+   <meta name=theme-color content=#764ba2>
+   <meta name=description content="PhpSPA Documentation - A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨">
+   <meta name=keywords content="PhpSPA, PHP, SPA, MPA, Multi-Page Application, Single Page Application, PHP Framework, Component-based, Routing, State Management, CSRF Protection">
+   <meta name=author content="Dave Conco">
+   <meta name=viewport content="width=device-width, initial-scale=1.0">
+   <meta property=og:type content=website>
+   <meta content=https://phpspa.tech/ property=og:url>
+   <meta property=og:title content="PhpSPA Documentation - Build React-like UIs in Pure PHP">
+   <meta property=og:description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨">
+   <meta property=og:image content=../../img/android-chrome-192x192.png>
+   <meta property=twitter:card content=summary_large_image>
+   <meta content=https://phpspa.tech/ property=twitter:url>
+   <meta property=twitter:title content="PhpSPA Documentation - Build React-like UIs in Pure PHP">
+   <meta property=twitter:description content="A component-based library for building modern, reactive user interfaces in pure PHP. Inspired by React. ✨">
+   <meta property=twitter:image content=../../img/android-chrome-192x192.png>
+   <meta name=robots content="index, follow">
+   <meta name=language content=English>
+   <meta name=revisit-after content="7 days">
+   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+   <style>
       body {
-         background: linear-gradient(135deg, 
-            rgba(102, 126, 234, 0.15) 0%,
-            rgba(118, 75, 162, 0.05) 25%,
-            rgba(240, 147, 251, 0.03) 50%,
-            rgba(102, 126, 234, 0.05) 75%,
-            rgba(118, 75, 162, 0.03) 100%
-         );
+         background: linear-gradient(135deg,
+               rgba(102, 126, 234, 0.15) 0%,
+               rgba(118, 75, 162, 0.05) 25%,
+               rgba(240, 147, 251, 0.03) 50%,
+               rgba(102, 126, 234, 0.05) 75%,
+               rgba(118, 75, 162, 0.03) 100%);
          background-attachment: fixed;
          background-size: 400% 400%;
          animation: gradientShift 15s ease infinite;
       }
 
       @keyframes gradientShift {
-         0%, 100% { background-position: 0% 50%; }
-         50% { background-position: 100% 50%; }
+
+         0%,
+         100% {
+            background-position: 0% 50%;
+         }
+
+         50% {
+            background-position: 100% 50%;
+         }
       }
 
       [data-md-color-scheme="slate"] body {
-         background: linear-gradient(135deg, 
-            rgba(102, 126, 234, 0.08) 0%, 
-            rgba(118, 75, 162, 0.12) 25%,
-            rgba(240, 147, 251, 0.08) 50%,
-            rgba(102, 126, 234, 0.12) 75%,
-            rgba(118, 75, 162, 0.08) 100%
-         );
+         background: linear-gradient(135deg,
+               rgba(102, 126, 234, 0.08) 0%,
+               rgba(118, 75, 162, 0.12) 25%,
+               rgba(240, 147, 251, 0.08) 50%,
+               rgba(102, 126, 234, 0.12) 75%,
+               rgba(118, 75, 162, 0.08) 100%);
       }
 
       .md-search__input {
@@ -38,21 +96,21 @@
          padding-top: 10px;
          width: 100%;
       }
-      
+
       .md-header__title {
          font-weight: 800;
          font-size: 1.3rem;
          letter-spacing: -0.02em;
       }
-      
+
       .md-header__button {
          color: rgba(255, 255, 255, 0.9);
       }
-      
+
       .md-header__button:hover {
          color: white;
       }
-      
+
       .md-search__input {
          background-color: rgba(255, 255, 255, 0.15);
          border: 1px solid rgba(255, 255, 255, 0.2);
@@ -61,11 +119,11 @@
          padding: 0.5rem 1rem;
          transition: all 0.3s ease;
       }
-      
+
       .md-search__input::placeholder {
          color: rgba(255, 255, 255, 0.7);
       }
-      
+
       .md-search__input:hover {
          background-color: rgba(255, 255, 255, 0.2);
          border-color: rgba(255, 255, 255, 0.4);
@@ -81,7 +139,7 @@
       .md-search__form {
          border-radius: 20px;
       }
-      
+
       .md-tabs {
          width: 100%;
          padding-bottom: 10px;
@@ -94,19 +152,19 @@
          padding: 5px 10px;
          opacity: 0.8;
       }
-      
+
       .md-tabs__link:hover {
          opacity: 1;
          background: #ffffff16;
          border-radius: 8px;
       }
-      
+
       .md-tabs__link--active {
          opacity: 1;
          font-weight: 600;
          border-bottom: 2px solid white;
       }
-      
+
       /* Logo/Brand area */
       .md-header__title .md-header__ellipsis {
          font-size: 18px;
@@ -178,25 +236,35 @@
       }
 
       /* PHP Variables - Different color from comments */
-      .highlight .nv,  /* Name.Variable like $name */
-      .highlight .vg,  /* Name.Variable.Global */
-      .highlight .vi,  /* Name.Variable.Instance */
-      .highlight .vc { /* Name.Variable.Class */
-         color: #dc5a65 !important; /* Red/Pink for variables */
+      .highlight .nv,
+      /* Name.Variable like $name */
+      .highlight .vg,
+      /* Name.Variable.Global */
+      .highlight .vi,
+      /* Name.Variable.Instance */
+      .highlight .vc {
+         /* Name.Variable.Class */
+         color: #dc5a65 !important;
+         /* Red/Pink for variables */
       }
 
       [data-md-color-scheme="slate"] .highlight .nv,
       [data-md-color-scheme="slate"] .highlight .vg,
       [data-md-color-scheme="slate"] .highlight .vi,
       [data-md-color-scheme="slate"] .highlight .vc {
-         color: #ff6b9d !important; /* Brighter pink for dark mode */
+         color: #ff6b9d !important;
+         /* Brighter pink for dark mode */
       }
 
       /* Class names */
-      .highlight .nc,  /* Name.Class like Nonce */
-      .highlight .nn,  /* Name.Namespace */
-      .highlight .na,  /* Name.Attribute */
-      .highlight .no { /* Name.Constant */
+      .highlight .nc,
+      /* Name.Class like Nonce */
+      .highlight .nn,
+      /* Name.Namespace */
+      .highlight .na,
+      /* Name.Attribute */
+      .highlight .no {
+         /* Name.Constant */
          color: #b1890f !important;
       }
 
@@ -208,87 +276,354 @@
       }
 
       /* Method/Function names */
-      .highlight .nx { /* Name.Property */
+      .highlight .nx {
+         /* Name.Property */
          color: #a626a4 !important;
       }
 
       [data-md-color-scheme="slate"] .highlight .nx {
          color: #ff00fb !important;
       }
-   </style><script>
+   </style>
+   <script>
       // Highlight static method calls like Nonce::enable()
-      document.addEventListener('DOMContentLoaded', function() {
-         document.querySelectorAll('.highlight').forEach(function(block) {
+      document.addEventListener('DOMContentLoaded', function () {
+         document.querySelectorAll('.highlight').forEach(function (block) {
             let html = block.innerHTML;
             // Match ::methodName( pattern and color the method name green
-            html = html.replace(/::([\w]+)(\s*\()/g, function(match, methodName, paren) {
+            html = html.replace(/::([\w]+)(\s*\()/g, function (match, methodName, paren) {
                return '::<span style="color: #1c7d4d; font-weight: 600;">' + methodName + '</span>' + paren;
             });
             block.innerHTML = html;
          });
       });
-   </script><script>
+   </script>
+   <script>
       // Highlight tags that start with <Component, <@, or <$ (including attributes)
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
          let isProcessing = false;
-         
+
          function highlightSpecialTags() {
             if (isProcessing) return; // Prevent re-entry
             isProcessing = true;
-            
-            document.querySelectorAll('.highlight').forEach(function(block) {
+
+            document.querySelectorAll('.highlight').forEach(function (block) {
                // Skip if already processed
                if (block.dataset.highlighted) return;
-               
+
                let html = block.innerHTML;
                // Regex: <[\$@]?[A-Z][\w.\-]*\b([^>]*)>
                // Matches <Component ...>, <@NavLink ...>, <$NavLink ...>, </Component ...>, </@NavLink ...>, </$NavLink ...>
                html = html.replace(/(&lt;\/?)([@$]?[A-Z][\w.\-]*)(\b[^&<>]*?)(?=&gt;)/g,
-                  function(match, open, tag, rest) {
+                  function (match, open, tag, rest) {
                      return open + '<span style="color: #a846b9;">' + tag + '</span>' + rest;
                   }
                );
                block.innerHTML = html;
                block.dataset.highlighted = 'true'; // Mark as processed
             });
-            
+
             isProcessing = false;
          }
-         
+
          highlightSpecialTags();
-         
+
          // Efficient observer with debouncing
          let timeoutId;
-         const observer = new MutationObserver(function() {
+         const observer = new MutationObserver(function () {
             clearTimeout(timeoutId);
             timeoutId = setTimeout(highlightSpecialTags, 100); // Debounce 100ms
          });
-         
-         observer.observe(document.body, { 
-            childList: true, 
-            subtree: true 
+
+         observer.observe(document.body, {
+            childList: true,
+            subtree: true
          });
       });
-   </script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=deep-purple data-md-color-accent=purple> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#response-api-reference class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <div data-md-color-scheme=default data-md-component=outdated hidden> </div> <header class="md-header md-header--shadow md-header--lifted" data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="PhpSPA @V2" class="md-header__button md-logo" aria-label="PhpSPA @V2" data-md-component=logo> <img src=../../img/phpspa-logo.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> PhpSPA @V2 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Response API Reference </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=deep-purple data-md-color-accent=purple aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=deep-purple data-md-color-accent=purple aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/dconco/phpspa title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> dconco/phpspa </div> </a> </div> </nav> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../../installation/ class=md-tabs__link> Getting Started </a> </li> <li class=md-tabs__item> <a href=../../routing/ class=md-tabs__link> Routing </a> </li> <li class=md-tabs__item> <a href=../../components/ class=md-tabs__link> Components </a> </li> <li class=md-tabs__item> <a href=../../navigations/link-component/ class=md-tabs__link> Navigation </a> </li> <li class=md-tabs__item> <a href=../../hooks/use-state/ class=md-tabs__link> PhpSPA Hooks </a> </li> <li class=md-tabs__item> <a href=../../requests/ class=md-tabs__link> Request Handling </a> </li> <li class=md-tabs__item> <a href=../../security/csrf-protection/ class=md-tabs__link> Security </a> </li> <li class=md-tabs__item> <a href=../../performance/html-compression/ class=md-tabs__link> Performance & Assets </a> </li> </ul> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="PhpSPA @V2" class="md-nav__button md-logo" aria-label="PhpSPA @V2" data-md-component=logo> <img src=../../img/phpspa-logo.png alt=logo> </a> PhpSPA @V2 </label> <div class=md-nav__source> <a href=https://github.com/dconco/phpspa title="Go to repository" class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </div> <div class=md-source__repository> dconco/phpspa </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Getting Started </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../installation/ class=md-nav__link> <span class=md-ellipsis> Installation </span> </a> </li> <li class=md-nav__item> <a href=../../core-concepts/ class=md-nav__link> <span class=md-ellipsis> Core Concepts </span> </a> </li> <li class=md-nav__item> <a href=../../layout/ class=md-nav__link> <span class=md-ellipsis> The Layout </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_3> <div class="md-nav__link md-nav__container"> <a href=../../routing/ class="md-nav__link "> <span class=md-ellipsis> Routing </span> </a> <label class="md-nav__link " for=__nav_3 id=__nav_3_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Routing </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../routing/advanced-routing/ class=md-nav__link> <span class=md-ellipsis> Advanced Routing </span> </a> </li> <li class=md-nav__item> <a href=../../routing/component-configuration/ class=md-nav__link> <span class=md-ellipsis> Component Configuration </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4> <div class="md-nav__link md-nav__container"> <a href=../../components/ class="md-nav__link "> <span class=md-ellipsis> Components </span> </a> <label class="md-nav__link " for=__nav_4 id=__nav_4_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Components </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../components/advanced-component/ class=md-nav__link> <span class=md-ellipsis> Advanced Component Patterns </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Navigation </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Navigation </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../navigations/link-component/ class=md-nav__link> <span class=md-ellipsis> Link Component </span> </a> </li> <li class=md-nav__item> <a href=../../navigations/navigate-component/ class=md-nav__link> <span class=md-ellipsis> Programmatic Navigation </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> PhpSPA Hooks </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> PhpSPA Hooks </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../hooks/use-state/ class=md-nav__link> <span class=md-ellipsis> useState Hook </span> </a> </li> <li class=md-nav__item> <a href=../../hooks/updating-state-of-mapped-arrays/ class=md-nav__link> <span class=md-ellipsis> Updating State Arrays </span> </a> </li> <li class=md-nav__item> <a href=../../hooks/use-effect/ class=md-nav__link> <span class=md-ellipsis> useEffect Hook </span> </a> </li> <li class=md-nav__item> <a href=../../hooks/use-function/ class=md-nav__link> <span class=md-ellipsis> useFunction Hook </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7> <div class="md-nav__link md-nav__container"> <a href=../../requests/ class="md-nav__link "> <span class=md-ellipsis> Request Handling </span> </a> <label class="md-nav__link " for=__nav_7 id=__nav_7_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Request Handling </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../requests/request-object/ class=md-nav__link> <span class=md-ellipsis> The Request Object </span> </a> </li> <li class=md-nav__item> <a href=../../requests/client-side-events-and-api/ class=md-nav__link> <span class=md-ellipsis> Client-Side Events & API </span> </a> </li> <li class=md-nav__item> <a href=../../requests/auto-reloading-components/ class=md-nav__link> <span class=md-ellipsis> Auto-Reloading Components </span> </a> </li> <li class=md-nav__item> <a href=../../requests/api-authentication/ class=md-nav__link> <span class=md-ellipsis> API Authentication </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Security </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Security </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../security/csrf-protection/ class=md-nav__link> <span class=md-ellipsis> CSRF Protection </span> </a> </li> <li class=md-nav__item> <a href=../../security/content-security-policy/ class=md-nav__link> <span class=md-ellipsis> Content Security Policy </span> </a> </li> <li class=md-nav__item> <a href=../../security/cors/ class=md-nav__link> <span class=md-ellipsis> Handling CORS </span> </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Performance & Assets </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Performance & Assets </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../performance/html-compression/ class=md-nav__link> <span class=md-ellipsis> HTML Compression </span> </a> </li> <li class=md-nav__item> <a href=../../performance/managing-styles-and-scripts/ class=md-nav__link> <span class=md-ellipsis> Managing Styles & Scripts </span> </a> </li> <li class=md-nav__item> <a href=../../performance/assets-caching/ class=md-nav__link> <span class=md-ellipsis> Assets Caching </span> </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/dconco/phpspa/edit/dev/docs/references/response.md title="Edit this page" class="md-content__button md-icon" rel=edit> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg> </a> <a href=https://github.com/dconco/phpspa/raw/dev/docs/references/response.md title="View source of this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg> </a> <h1 id=response-api-reference>Response API Reference<a class=headerlink href=#response-api-reference title="Permanent link">&para;</a></h1> <p>The <code>Response</code> class provides a fluent interface for HTTP response management in PhpSPA. It combines powerful helper methods with chainable modifiers to make API development robust and expressive.</p> <div class="admonition info"> <p class=admonition-title>Namespace</p> <p><code>PhpSPA\Http\Response</code></p> </div> <hr> <h2 id=basic-usage><strong>Basic Usage</strong><a class=headerlink href=#basic-usage title="Permanent link">&para;</a></h2> <h3 id=quick-json-response><strong>Quick JSON Response</strong><a class=headerlink href=#quick-json-response title="Permanent link">&para;</a></h3> <div class="language-php highlight"><pre><span></span><code><span id=__span-0-1><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=cp>&lt;?php</span>
+   </script>
+</head>
+
+<body dir=ltr data-md-color-scheme=default data-md-color-primary=deep-purple data-md-color-accent=purple> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label>
+   <div data-md-component=skip> <a href=#response-api-reference class=md-skip> Skip to content </a> </div>
+   <div data-md-component=announce> </div>
+   <div data-md-color-scheme=default data-md-component=outdated hidden> </div>
+   <header class="md-header md-header--shadow md-header--lifted" data-md-component=header>
+      <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="PhpSPA @V2" class="md-header__button md-logo" aria-label="PhpSPA @V2" data-md-component=logo> <img src=../../img/phpspa-logo.png alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+               <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg> </label>
+         <div class=md-header__title data-md-component=header-title>
+            <div class=md-header__ellipsis>
+               <div class=md-header__topic> <span class=md-ellipsis> PhpSPA @V2 </span> </div>
+               <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Response API Reference </span> </div>
+            </div>
+         </div>
+         <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media data-md-color-scheme=default data-md-color-primary=deep-purple data-md-color-accent=purple aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                  <path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z" />
+               </svg> </label> <input class=md-option data-md-color-media data-md-color-scheme=slate data-md-color-primary=deep-purple data-md-color-accent=purple aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                  <path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z" />
+               </svg> </label> </form>
+         <script>var palette = __md_get("__palette"); if (palette && palette.color) { if ("(prefers-color-scheme)" === palette.color.media) { var media = matchMedia("(prefers-color-scheme: light)"), input = document.querySelector(media.matches ? "[data-md-color-media='(prefers-color-scheme: light)']" : "[data-md-color-media='(prefers-color-scheme: dark)']"); palette.color.media = input.getAttribute("data-md-color-media"), palette.color.scheme = input.getAttribute("data-md-color-scheme"), palette.color.primary = input.getAttribute("data-md-color-primary"), palette.color.accent = input.getAttribute("data-md-color-accent") } for (var [key, value] of Object.entries(palette.color)) document.body.setAttribute("data-md-color-" + key, value) }</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+               <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5" />
+            </svg> </label>
+         <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label>
+            <div class=md-search__inner role=search>
+               <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                        <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5" />
+                     </svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                        <path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z" />
+                     </svg> </label>
+                  <nav class=md-search__options aria-label=Search> <a href=javascript:void(0) class="md-search__icon md-icon" title=Share aria-label=Share data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                           <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08" />
+                        </svg> </a> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                           <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                        </svg> </button> </nav>
+                  <div class=md-search__suggest data-md-component=search-suggest></div>
+               </form>
+               <div class=md-search__output>
+                  <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix>
+                     <div class=md-search-result data-md-component=search-result>
+                        <div class=md-search-result__meta> Initializing search </div>
+                        <ol class=md-search-result__list role=presentation></ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class=md-header__source> <a href=https://github.com/dconco/phpspa title="Go to repository" class=md-source data-md-component=source>
+               <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                     <path
+                        d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2" />
+                  </svg> </div>
+               <div class=md-source__repository> dconco/phpspa </div>
+            </a> </div>
+      </nav>
+      <nav class=md-tabs aria-label=Tabs data-md-component=tabs>
+         <div class=md-grid>
+            <ul class=md-tabs__list>
+               <li class=md-tabs__item> <a href=../.. class=md-tabs__link> Home </a> </li>
+               <li class=md-tabs__item> <a href=../../installation/ class=md-tabs__link> Getting Started </a> </li>
+               <li class=md-tabs__item> <a href=../../routing/ class=md-tabs__link> Routing </a> </li>
+               <li class=md-tabs__item> <a href=../../components/ class=md-tabs__link> Components </a> </li>
+               <li class=md-tabs__item> <a href=../../navigations/link-component/ class=md-tabs__link> Navigation </a> </li>
+               <li class=md-tabs__item> <a href=../../hooks/use-state/ class=md-tabs__link> PhpSPA Hooks </a> </li>
+               <li class=md-tabs__item> <a href=../../requests/ class=md-tabs__link> Request Handling </a> </li>
+               <li class=md-tabs__item> <a href=../../security/csrf-protection/ class=md-tabs__link> Security </a> </li>
+               <li class=md-tabs__item> <a href=../../performance/html-compression/ class=md-tabs__link> Performance & Assets </a> </li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+   <div class=md-container data-md-component=container>
+      <main class=md-main data-md-component=main>
+         <div class="md-main__inner md-grid">
+            <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation>
+               <div class=md-sidebar__scrollwrap>
+                  <div class=md-sidebar__inner>
+                     <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="PhpSPA @V2" class="md-nav__button md-logo" aria-label="PhpSPA @V2" data-md-component=logo> <img src=../../img/phpspa-logo.png alt=logo> </a> PhpSPA @V2 </label>
+                        <div class=md-nav__source> <a href=https://github.com/dconco/phpspa title="Go to repository" class=md-source data-md-component=source>
+                              <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                       d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2" />
+                                 </svg> </div>
+                              <div class=md-source__repository> dconco/phpspa </div>
+                           </a> </div>
+                        <ul class=md-nav__list data-md-scrollfix>
+                           <li class=md-nav__item> <a href=../.. class=md-nav__link> <span class=md-ellipsis> Home </span> </a> </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2 id=__nav_2_label tabindex=0> <span class=md-ellipsis> Getting Started </span> <span class="md-nav__icon md-icon"></span> </label>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_2_label aria-expanded=false> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> Getting Started </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../installation/ class=md-nav__link> <span class=md-ellipsis> Installation </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../core-concepts/ class=md-nav__link> <span class=md-ellipsis> Core Concepts </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../layout/ class=md-nav__link> <span class=md-ellipsis> The Layout </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_3>
+                              <div class="md-nav__link md-nav__container"> <a href=../../routing/ class="md-nav__link "> <span class=md-ellipsis> Routing </span> </a> <label class="md-nav__link " for=__nav_3 id=__nav_3_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_3_label aria-expanded=false> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> Routing </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../routing/advanced-routing/ class=md-nav__link> <span class=md-ellipsis> Advanced Routing </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../routing/component-configuration/ class=md-nav__link> <span class=md-ellipsis> Component Configuration </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_4>
+                              <div class="md-nav__link md-nav__container"> <a href=../../components/ class="md-nav__link "> <span class=md-ellipsis> Components </span> </a> <label class="md-nav__link " for=__nav_4 id=__nav_4_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_4_label aria-expanded=false> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> Components </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../components/advanced-component/ class=md-nav__link> <span class=md-ellipsis> Advanced Component Patterns </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_5> <label class=md-nav__link for=__nav_5 id=__nav_5_label tabindex=0> <span class=md-ellipsis> Navigation </span> <span class="md-nav__icon md-icon"></span> </label>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_5_label aria-expanded=false> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> Navigation </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../navigations/link-component/ class=md-nav__link> <span class=md-ellipsis> Link Component </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../navigations/navigate-component/ class=md-nav__link> <span class=md-ellipsis> Programmatic Navigation </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6 id=__nav_6_label tabindex=0> <span class=md-ellipsis> PhpSPA Hooks </span> <span class="md-nav__icon md-icon"></span> </label>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_6_label aria-expanded=false> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> PhpSPA Hooks </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../hooks/use-state/ class=md-nav__link> <span class=md-ellipsis> useState Hook </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../hooks/updating-state-of-mapped-arrays/ class=md-nav__link> <span class=md-ellipsis> Updating State Arrays </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../hooks/use-effect/ class=md-nav__link> <span class=md-ellipsis> useEffect Hook </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../hooks/use-function/ class=md-nav__link> <span class=md-ellipsis> useFunction Hook </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_7>
+                              <div class="md-nav__link md-nav__container"> <a href=../../requests/ class="md-nav__link "> <span class=md-ellipsis> Request Handling </span> </a> <label class="md-nav__link " for=__nav_7 id=__nav_7_label tabindex=0> <span class="md-nav__icon md-icon"></span> </label> </div>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_7_label aria-expanded=false> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Request Handling </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../requests/request-object/ class=md-nav__link> <span class=md-ellipsis> The Request Object </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../requests/client-side-events-and-api/ class=md-nav__link> <span class=md-ellipsis> Client-Side Events & API </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../requests/auto-reloading-components/ class=md-nav__link> <span class=md-ellipsis> Auto-Reloading Components </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../requests/api-authentication/ class=md-nav__link> <span class=md-ellipsis> API Authentication </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8 id=__nav_8_label tabindex=0> <span class=md-ellipsis> Security </span> <span class="md-nav__icon md-icon"></span> </label>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_8_label aria-expanded=false> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> Security </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../security/csrf-protection/ class=md-nav__link> <span class=md-ellipsis> CSRF Protection </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../security/content-security-policy/ class=md-nav__link> <span class=md-ellipsis> Content Security Policy </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../security/cors/ class=md-nav__link> <span class=md-ellipsis> Handling CORS </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                           <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type=checkbox id=__nav_9> <label class=md-nav__link for=__nav_9 id=__nav_9_label tabindex=0> <span class=md-ellipsis> Performance & Assets </span> <span class="md-nav__icon md-icon"></span> </label>
+                              <nav class=md-nav data-md-level=1 aria-labelledby=__nav_9_label aria-expanded=false> <label class=md-nav__title for=__nav_9> <span class="md-nav__icon md-icon"></span> Performance & Assets </label>
+                                 <ul class=md-nav__list data-md-scrollfix>
+                                    <li class=md-nav__item> <a href=../../performance/html-compression/ class=md-nav__link> <span class=md-ellipsis> HTML Compression </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../performance/managing-styles-and-scripts/ class=md-nav__link> <span class=md-ellipsis> Managing Styles & Scripts </span> </a> </li>
+                                    <li class=md-nav__item> <a href=../../performance/assets-caching/ class=md-nav__link> <span class=md-ellipsis> Assets Caching </span> </a> </li>
+                                 </ul>
+                              </nav>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+            <div class=md-content data-md-component=content>
+               <article class="md-content__inner md-typeset"> <a href=https://github.com/dconco/phpspa/edit/dev/docs/references/response.md title="Edit this page" class="md-content__button md-icon" rel=edit> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                        <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z" />
+                     </svg> </a> <a href=https://github.com/dconco/phpspa/raw/dev/docs/references/response.md title="View source of this page" class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                        <path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5" />
+                     </svg> </a>
+                  <h1 id=response-api-reference>Response API Reference<a class=headerlink href=#response-api-reference title="Permanent link">&para;</a></h1>
+                  <p>The <code>Response</code> class provides a fluent interface for HTTP response management in PhpSPA. It combines powerful helper methods with chainable modifiers to make API development robust and expressive.</p>
+                  <div class="admonition info">
+                     <p class=admonition-title>Namespace</p>
+                     <p><code>PhpSPA\Http\Response</code></p>
+                  </div>
+                  <hr>
+                  <h2 id=basic-usage><strong>Basic Usage</strong><a class=headerlink href=#basic-usage title="Permanent link">&para;</a></h2>
+                  <h3 id=quick-json-response><strong>Quick JSON Response</strong><a class=headerlink href=#quick-json-response title="Permanent link">&para;</a></h3>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-0-1><a id=__codelineno-0-1 name=__codelineno-0-1 href=#__codelineno-0-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-0-2><a id=__codelineno-0-2 name=__codelineno-0-2 href=#__codelineno-0-2></a>
 </span><span id=__span-0-3><a id=__codelineno-0-3 name=__codelineno-0-3 href=#__codelineno-0-3></a><span class=k>use</span> <span class=nx>PhpSPA\Http\Response</span><span class=p>;</span>
 </span><span id=__span-0-4><a id=__codelineno-0-4 name=__codelineno-0-4 href=#__codelineno-0-4></a>
 </span><span id=__span-0-5><a id=__codelineno-0-5 name=__codelineno-0-5 href=#__codelineno-0-5></a><span class=c1>// Send an immediate JSON response</span>
 </span><span id=__span-0-6><a id=__codelineno-0-6 name=__codelineno-0-6 href=#__codelineno-0-6></a><span class=nx>Response</span><span class=o>::</span><span class=na>sendSuccess</span><span class=p>([</span><span class=s1>&#39;id&#39;</span> <span class=o>=&gt;</span> <span class=mi>1</span><span class=p>],</span> <span class=s1>&#39;User created&#39;</span><span class=p>);</span>
-</span></code></pre></div> <h3 id=fluent-chain-construction><strong>Fluent Chain Construction</strong><a class=headerlink href=#fluent-chain-construction title="Permanent link">&para;</a></h3> <div class="language-php highlight"><pre><span></span><code><span id=__span-1-1><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  <h3 id=fluent-chain-construction><strong>Fluent Chain Construction</strong><a class=headerlink href=#fluent-chain-construction title="Permanent link">&para;</a></h3>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-1-1><a id=__codelineno-1-1 name=__codelineno-1-1 href=#__codelineno-1-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-1-2><a id=__codelineno-1-2 name=__codelineno-1-2 href=#__codelineno-1-2></a>
 </span><span id=__span-1-3><a id=__codelineno-1-3 name=__codelineno-1-3 href=#__codelineno-1-3></a><span class=k>return</span> <span class=p>(</span><span class=k>new</span> <span class=nx>Response</span><span class=p>())</span>
 </span><span id=__span-1-4><a id=__codelineno-1-4 name=__codelineno-1-4 href=#__codelineno-1-4></a>    <span class=o>-&gt;</span><span class=na>status</span><span class=p>(</span><span class=mi>200</span><span class=p>)</span>
 </span><span id=__span-1-5><a id=__codelineno-1-5 name=__codelineno-1-5 href=#__codelineno-1-5></a>    <span class=o>-&gt;</span><span class=na>header</span><span class=p>(</span><span class=s1>&#39;X-Custom-Header&#39;</span><span class=p>,</span> <span class=s1>&#39;AppValue&#39;</span><span class=p>)</span>
 </span><span id=__span-1-6><a id=__codelineno-1-6 name=__codelineno-1-6 href=#__codelineno-1-6></a>    <span class=o>-&gt;</span><span class=na>data</span><span class=p>([</span><span class=s1>&#39;message&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;Hello World&#39;</span><span class=p>]);</span>
-</span></code></pre></div> <hr> <h2 id=response-types><strong>Response Types</strong><a class=headerlink href=#response-types title="Permanent link">&para;</a></h2> <p>The <code>Response</code> class includes dedicated methods for common HTTP scenarios.</p> <h3 id=success-responses><strong>Success Responses</strong><a class=headerlink href=#success-responses title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th style="text-align: left;">Method</th> <th style="text-align: left;">Status</th> <th style="text-align: left;">Description</th> </tr> </thead> <tbody> <tr> <td style="text-align: left;"><code>success($data, $message)</code></td> <td style="text-align: left;"><code>200</code></td> <td style="text-align: left;">Standard success response</td> </tr> <tr> <td style="text-align: left;"><code>created($data, $message)</code></td> <td style="text-align: left;"><code>201</code></td> <td style="text-align: left;">Resource successfully created</td> </tr> <tr> <td style="text-align: left;"><code>sendFile($path)</code></td> <td style="text-align: left;"><code>200</code></td> <td style="text-align: left;">Streams a file with auto-compression</td> </tr> </tbody> </table> <p><strong>Example:</strong> <div class="language-php highlight"><pre><span></span><code><span id=__span-2-1><a id=__codelineno-2-1 name=__codelineno-2-1 href=#__codelineno-2-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  <hr>
+                  <h2 id=response-types><strong>Response Types</strong><a class=headerlink href=#response-types title="Permanent link">&para;</a></h2>
+                  <p>The <code>Response</code> class includes dedicated methods for common HTTP scenarios.</p>
+                  <h3 id=success-responses><strong>Success Responses</strong><a class=headerlink href=#success-responses title="Permanent link">&para;</a></h3>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left;">Method</th>
+                           <th style="text-align: left;">Status</th>
+                           <th style="text-align: left;">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left;"><code>success($data, $message)</code></td>
+                           <td style="text-align: left;"><code>200</code></td>
+                           <td style="text-align: left;">Standard success response</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>created($data, $message)</code></td>
+                           <td style="text-align: left;"><code>201</code></td>
+                           <td style="text-align: left;">Resource successfully created</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>sendFile($path)</code></td>
+                           <td style="text-align: left;"><code>200</code></td>
+                           <td style="text-align: left;">Streams a file with auto-compression</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p><strong>Example:</strong>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-2-1><a id=__codelineno-2-1 name=__codelineno-2-1 href=#__codelineno-2-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-2-2><a id=__codelineno-2-2 name=__codelineno-2-2 href=#__codelineno-2-2></a>
 </span><span id=__span-2-3><a id=__codelineno-2-3 name=__codelineno-2-3 href=#__codelineno-2-3></a><span class=c1>// Standard success</span>
 </span><span id=__span-2-4><a id=__codelineno-2-4 name=__codelineno-2-4 href=#__codelineno-2-4></a><span class=k>return</span> <span class=nv>$response</span><span class=o>-&gt;</span><span class=na>success</span><span class=p>(</span><span class=nv>$user</span><span class=p>,</span> <span class=s1>&#39;User profile retrieved&#39;</span><span class=p>);</span>
 </span><span id=__span-2-5><a id=__codelineno-2-5 name=__codelineno-2-5 href=#__codelineno-2-5></a>
 </span><span id=__span-2-6><a id=__codelineno-2-6 name=__codelineno-2-6 href=#__codelineno-2-6></a><span class=c1>// File download with compression support</span>
 </span><span id=__span-2-7><a id=__codelineno-2-7 name=__codelineno-2-7 href=#__codelineno-2-7></a><span class=k>return</span> <span class=nv>$response</span><span class=o>-&gt;</span><span class=na>sendFile</span><span class=p>(</span><span class=s1>&#39;/storage/reports/2024.pdf&#39;</span><span class=p>);</span>
-</span></code></pre></div></p> <hr> <h3 id=error-responses><strong>Error Responses</strong><a class=headerlink href=#error-responses title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th style="text-align: left;">Method</th> <th style="text-align: left;">Status</th> <th style="text-align: left;">Description</th> </tr> </thead> <tbody> <tr> <td style="text-align: left;"><code>error($msg, $details)</code></td> <td style="text-align: left;"><code>---</code></td> <td style="text-align: left;">Generic error wrapper</td> </tr> <tr> <td style="text-align: left;"><code>notFound($msg)</code></td> <td style="text-align: left;"><code>404</code></td> <td style="text-align: left;">Resource not found</td> </tr> <tr> <td style="text-align: left;"><code>unauthorized($msg)</code></td> <td style="text-align: left;"><code>401</code></td> <td style="text-align: left;">Authentication required</td> </tr> <tr> <td style="text-align: left;"><code>forbidden($msg)</code></td> <td style="text-align: left;"><code>403</code></td> <td style="text-align: left;">Access denied</td> </tr> <tr> <td style="text-align: left;"><code>validationError($errors)</code></td> <td style="text-align: left;"><code>422</code></td> <td style="text-align: left;">Form validation failure</td> </tr> </tbody> </table> <p><strong>Example:</strong> <div class="language-php highlight"><pre><span></span><code><span id=__span-3-1><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  </p>
+                  <hr>
+                  <h3 id=error-responses><strong>Error Responses</strong><a class=headerlink href=#error-responses title="Permanent link">&para;</a></h3>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left;">Method</th>
+                           <th style="text-align: left;">Status</th>
+                           <th style="text-align: left;">Description</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left;"><code>error($msg, $details)</code></td>
+                           <td style="text-align: left;"><code>---</code></td>
+                           <td style="text-align: left;">Generic error wrapper</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>notFound($msg)</code></td>
+                           <td style="text-align: left;"><code>404</code></td>
+                           <td style="text-align: left;">Resource not found</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>unauthorized($msg)</code></td>
+                           <td style="text-align: left;"><code>401</code></td>
+                           <td style="text-align: left;">Authentication required</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>forbidden($msg)</code></td>
+                           <td style="text-align: left;"><code>403</code></td>
+                           <td style="text-align: left;">Access denied</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>validationError($errors)</code></td>
+                           <td style="text-align: left;"><code>422</code></td>
+                           <td style="text-align: left;">Form validation failure</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p><strong>Example:</strong>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-3-1><a id=__codelineno-3-1 name=__codelineno-3-1 href=#__codelineno-3-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-3-2><a id=__codelineno-3-2 name=__codelineno-3-2 href=#__codelineno-3-2></a>
 </span><span id=__span-3-3><a id=__codelineno-3-3 name=__codelineno-3-3 href=#__codelineno-3-3></a><span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nv>$user</span><span class=p>)</span> <span class=p>{</span>
 </span><span id=__span-3-4><a id=__codelineno-3-4 name=__codelineno-3-4 href=#__codelineno-3-4></a>    <span class=k>return</span> <span class=nv>$response</span><span class=o>-&gt;</span><span class=na>notFound</span><span class=p>(</span><span class=s1>&#39;User does not exist&#39;</span><span class=p>);</span>
@@ -297,11 +632,27 @@
 </span><span id=__span-3-7><a id=__codelineno-3-7 name=__codelineno-3-7 href=#__codelineno-3-7></a><span class=k>if</span> <span class=p>(</span><span class=nv>$input</span><span class=o>-&gt;</span><span class=na>fails</span><span class=p>())</span> <span class=p>{</span>
 </span><span id=__span-3-8><a id=__codelineno-3-8 name=__codelineno-3-8 href=#__codelineno-3-8></a>    <span class=k>return</span> <span class=nv>$response</span><span class=o>-&gt;</span><span class=na>validationError</span><span class=p>(</span><span class=nv>$input</span><span class=o>-&gt;</span><span class=na>errors</span><span class=p>());</span>
 </span><span id=__span-3-9><a id=__codelineno-3-9 name=__codelineno-3-9 href=#__codelineno-3-9></a><span class=p>}</span>
-</span></code></pre></div></p> <hr> <h3 id=special-responses><strong>Special Responses</strong><a class=headerlink href=#special-responses title="Permanent link">&para;</a></h3> <h4 id=redirects><strong>Redirects</strong><a class=headerlink href=#redirects title="Permanent link">&para;</a></h4> <div class="admonition warning"> <p class=admonition-title>Exit Behavior</p> <p>The <code>redirect()</code> method terminates script execution immediately.</p> </div> <div class="language-php highlight"><pre><span></span><code><span id=__span-4-1><a id=__codelineno-4-1 name=__codelineno-4-1 href=#__codelineno-4-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  </p>
+                  <hr>
+                  <h3 id=special-responses><strong>Special Responses</strong><a class=headerlink href=#special-responses title="Permanent link">&para;</a></h3>
+                  <h4 id=redirects><strong>Redirects</strong><a class=headerlink href=#redirects title="Permanent link">&para;</a></h4>
+                  <div class="admonition warning">
+                     <p class=admonition-title>Exit Behavior</p>
+                     <p>The <code>redirect()</code> method terminates script execution immediately.</p>
+                  </div>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-4-1><a id=__codelineno-4-1 name=__codelineno-4-1 href=#__codelineno-4-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-4-2><a id=__codelineno-4-2 name=__codelineno-4-2 href=#__codelineno-4-2></a>
 </span><span id=__span-4-3><a id=__codelineno-4-3 name=__codelineno-4-3 href=#__codelineno-4-3></a><span class=c1>// Redirect to another URL</span>
 </span><span id=__span-4-4><a id=__codelineno-4-4 name=__codelineno-4-4 href=#__codelineno-4-4></a><span class=nv>$response</span><span class=o>-&gt;</span><span class=na>redirect</span><span class=p>(</span><span class=s1>&#39;/login&#39;</span><span class=p>,</span> <span class=mi>302</span><span class=p>);</span>
-</span></code></pre></div> <h4 id=pagination><strong>Pagination</strong><a class=headerlink href=#pagination title="Permanent link">&para;</a></h4> <p>Standardized pagination structure.</p> <div class="language-php highlight"><pre><span></span><code><span id=__span-5-1><a id=__codelineno-5-1 name=__codelineno-5-1 href=#__codelineno-5-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  <h4 id=pagination><strong>Pagination</strong><a class=headerlink href=#pagination title="Permanent link">&para;</a></h4>
+                  <p>Standardized pagination structure.</p>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-5-1><a id=__codelineno-5-1 name=__codelineno-5-1 href=#__codelineno-5-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-5-2><a id=__codelineno-5-2 name=__codelineno-5-2 href=#__codelineno-5-2></a>
 </span><span id=__span-5-3><a id=__codelineno-5-3 name=__codelineno-5-3 href=#__codelineno-5-3></a><span class=k>return</span> <span class=nv>$response</span><span class=o>-&gt;</span><span class=na>paginate</span><span class=p>(</span>
 </span><span id=__span-5-4><a id=__codelineno-5-4 name=__codelineno-5-4 href=#__codelineno-5-4></a>    <span class=nx>items</span><span class=o>:</span> <span class=nv>$users</span><span class=p>,</span> 
@@ -310,16 +661,47 @@
 </span><span id=__span-5-7><a id=__codelineno-5-7 name=__codelineno-5-7 href=#__codelineno-5-7></a>    <span class=nx>currentPage</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span> 
 </span><span id=__span-5-8><a id=__codelineno-5-8 name=__codelineno-5-8 href=#__codelineno-5-8></a>    <span class=nx>lastPage</span><span class=o>:</span> <span class=mi>7</span>
 </span><span id=__span-5-9><a id=__codelineno-5-9 name=__codelineno-5-9 href=#__codelineno-5-9></a><span class=p>);</span>
-</span></code></pre></div> <hr> <h2 id=modifiers><strong>Modifiers</strong><a class=headerlink href=#modifiers title="Permanent link">&para;</a></h2> <p>Customize instances using chainable methods.</p> <h3 id=statusint-code><code>status(int $code)</code><a class=headerlink href=#statusint-code title="Permanent link">&para;</a></h3> <p>Set the HTTP status code. <div class="language-php highlight"><pre><span></span><code><span id=__span-6-1><a id=__codelineno-6-1 name=__codelineno-6-1 href=#__codelineno-6-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  <hr>
+                  <h2 id=modifiers><strong>Modifiers</strong><a class=headerlink href=#modifiers title="Permanent link">&para;</a></h2>
+                  <p>Customize instances using chainable methods.</p>
+                  <h3 id=statusint-code><code>status(int $code)</code><a class=headerlink href=#statusint-code title="Permanent link">&para;</a></h3>
+                  <p>Set the HTTP status code.
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-6-1><a id=__codelineno-6-1 name=__codelineno-6-1 href=#__codelineno-6-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-6-2><a id=__codelineno-6-2 name=__codelineno-6-2 href=#__codelineno-6-2></a>
 </span><span id=__span-6-3><a id=__codelineno-6-3 name=__codelineno-6-3 href=#__codelineno-6-3></a><span class=nv>$response</span><span class=o>-&gt;</span><span class=na>status</span><span class=p>(</span><span class=nx>Response</span><span class=o>::</span><span class=na>StatusTeapot</span><span class=p>);</span> <span class=c1>// 418</span>
-</span></code></pre></div></p> <h3 id=headerstring-name-string-value><code>header(string $name, string $value)</code><a class=headerlink href=#headerstring-name-string-value title="Permanent link">&para;</a></h3> <p>Set a single header. <div class="language-php highlight"><pre><span></span><code><span id=__span-7-1><a id=__codelineno-7-1 name=__codelineno-7-1 href=#__codelineno-7-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  </p>
+                  <h3 id=headerstring-name-string-value><code>header(string $name, string $value)</code><a class=headerlink href=#headerstring-name-string-value title="Permanent link">&para;</a></h3>
+                  <p>Set a single header.
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-7-1><a id=__codelineno-7-1 name=__codelineno-7-1 href=#__codelineno-7-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-7-2><a id=__codelineno-7-2 name=__codelineno-7-2 href=#__codelineno-7-2></a>
 </span><span id=__span-7-3><a id=__codelineno-7-3 name=__codelineno-7-3 href=#__codelineno-7-3></a><span class=nv>$response</span><span class=o>-&gt;</span><span class=na>header</span><span class=p>(</span><span class=s1>&#39;Cache-Control&#39;</span><span class=p>,</span> <span class=s1>&#39;no-cache&#39;</span><span class=p>);</span>
-</span></code></pre></div></p> <h3 id=contenttypestring-type><code>contentType(string $type)</code><a class=headerlink href=#contenttypestring-type title="Permanent link">&para;</a></h3> <p>Set the MIME type. <div class="language-php highlight"><pre><span></span><code><span id=__span-8-1><a id=__codelineno-8-1 name=__codelineno-8-1 href=#__codelineno-8-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  </p>
+                  <h3 id=contenttypestring-type><code>contentType(string $type)</code><a class=headerlink href=#contenttypestring-type title="Permanent link">&para;</a></h3>
+                  <p>Set the MIME type.
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-8-1><a id=__codelineno-8-1 name=__codelineno-8-1 href=#__codelineno-8-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-8-2><a id=__codelineno-8-2 name=__codelineno-8-2 href=#__codelineno-8-2></a>
 </span><span id=__span-8-3><a id=__codelineno-8-3 name=__codelineno-8-3 href=#__codelineno-8-3></a><span class=nv>$response</span><span class=o>-&gt;</span><span class=na>contentType</span><span class=p>(</span><span class=s1>&#39;application/xml&#39;</span><span class=p>);</span>
-</span></code></pre></div></p> <hr> <h2 id=static-helpers><strong>Static Helpers</strong><a class=headerlink href=#static-helpers title="Permanent link">&para;</a></h2> <p>Helpers to send responses immediately without <code>return</code>.</p> <div class="admonition tip"> <p class=admonition-title>Immediate Execution</p> <p>These methods construct the response, send headers, output content, and <strong>exit</strong> the application.</p> </div> <div class="language-php highlight"><pre><span></span><code><span id=__span-9-1><a id=__codelineno-9-1 name=__codelineno-9-1 href=#__codelineno-9-1></a><span class=cp>&lt;?php</span>
+</span></code></pre>
+                  </div>
+                  </p>
+                  <hr>
+                  <h2 id=static-helpers><strong>Static Helpers</strong><a class=headerlink href=#static-helpers title="Permanent link">&para;</a></h2>
+                  <p>Helpers to send responses immediately without <code>return</code>.</p>
+                  <div class="admonition tip">
+                     <p class=admonition-title>Immediate Execution</p>
+                     <p>These methods construct the response, send headers, output content, and <strong>exit</strong> the application.</p>
+                  </div>
+                  <div class="language-php highlight">
+                     <pre><span></span><code><span id=__span-9-1><a id=__codelineno-9-1 name=__codelineno-9-1 href=#__codelineno-9-1></a><span class=cp>&lt;?php</span>
 </span><span id=__span-9-2><a id=__codelineno-9-2 name=__codelineno-9-2 href=#__codelineno-9-2></a>
 </span><span id=__span-9-3><a id=__codelineno-9-3 name=__codelineno-9-3 href=#__codelineno-9-3></a><span class=c1>// Send simple JSON</span>
 </span><span id=__span-9-4><a id=__codelineno-9-4 name=__codelineno-9-4 href=#__codelineno-9-4></a><span class=nx>Response</span><span class=o>::</span><span class=na>sendJson</span><span class=p>([</span><span class=s1>&#39;foo&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;bar&#39;</span><span class=p>]);</span>
@@ -329,4 +711,104 @@
 </span><span id=__span-9-8><a id=__codelineno-9-8 name=__codelineno-9-8 href=#__codelineno-9-8></a>
 </span><span id=__span-9-9><a id=__codelineno-9-9 name=__codelineno-9-9 href=#__codelineno-9-9></a><span class=c1>// Send formatted error</span>
 </span><span id=__span-9-10><a id=__codelineno-9-10 name=__codelineno-9-10 href=#__codelineno-9-10></a><span class=nx>Response</span><span class=o>::</span><span class=na>sendError</span><span class=p>(</span><span class=s1>&#39;Database connection failed&#39;</span><span class=p>,</span> <span class=mi>500</span><span class=p>);</span>
-</span></code></pre></div> <hr> <h2 id=status-constants><strong>Status Constants</strong><a class=headerlink href=#status-constants title="Permanent link">&para;</a></h2> <p>Use these constants for readable status codes.</p> <table> <thead> <tr> <th style="text-align: left;">Constant</th> <th style="text-align: left;">Value</th> </tr> </thead> <tbody> <tr> <td style="text-align: left;"><code>Response::StatusOK</code></td> <td style="text-align: left;">200</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusCreated</code></td> <td style="text-align: left;">201</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusBadRequest</code></td> <td style="text-align: left;">400</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusUnauthorized</code></td> <td style="text-align: left;">401</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusForbidden</code></td> <td style="text-align: left;">403</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusNotFound</code></td> <td style="text-align: left;">404</td> </tr> <tr> <td style="text-align: left;"><code>Response::StatusInternalServerError</code></td> <td style="text-align: left;">500</td> </tr> </tbody> </table> <form class=md-feedback name=feedback hidden> <fieldset> <legend class=md-feedback__title> Was this page helpful? </legend> <div class=md-feedback__inner> <div class=md-feedback__list> <button class="md-feedback__icon md-icon" type=submit title="This page was helpful" data-md-value=1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg> </button> <button class="md-feedback__icon md-icon" type=submit title="This page could be improved" data-md-value=0> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg> </button> </div> <div class=md-feedback__note> <div data-md-value=1 hidden> Thanks for your feedback! </div> <div data-md-value=0 hidden> Thanks for your feedback! Help us improve this page by <a href="https://github.com/dconco/phpspa/issues/new/?title=[Docs%20Feedback]%20Response%20API%20Reference%20-%20/references/response/" target=_blank rel=noopener>telling us what you need</a>. </div> </div> </div> </fieldset> </form> </article> </div> <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> Copyright &copy; 2025 <a href=https://github.com/dconco target=_blank rel=noopener>Dave Conco</a>. All rights reserved. </div> </div> <div class=md-social> <a href=https://github.com/dconco/phpspa target=_blank rel=noopener title="GitHub Repository" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </a> <a href=https://x.com/dave_conco target=_blank rel=noopener title="Follow on Twitter" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg> </a> <a href=https://chat.whatsapp.com/CFeGqXBMR7j2oLE1148A5f target=_blank rel=noopener title="Join PhpSPA Community" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg> </a> <a href=https://youtube.com/@daveconco target=_blank rel=noopener title="YouTube Channel" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg> </a> <a href=mailto:me@dconco.tech target=_blank rel=noopener title="Email Contact" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg> </a> <a href=https://linkedin.com/in/dconco target=_blank rel=noopener title="LinkedIn Profile" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <div class=md-progress data-md-component=progress role=progressbar></div> <script id=__config type=application/json>{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tooltips", "content.tabs.link", "toc.follow", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script> <script src=../../assets/javascripts/bundle.f55a23d4.min.js></script> </body> </html>
+</span></code></pre>
+                  </div>
+                  <hr>
+                  <h2 id=status-constants><strong>Status Constants</strong><a class=headerlink href=#status-constants title="Permanent link">&para;</a></h2>
+                  <p>Use these constants for readable status codes.</p>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th style="text-align: left;">Constant</th>
+                           <th style="text-align: left;">Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusOK</code></td>
+                           <td style="text-align: left;">200</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusCreated</code></td>
+                           <td style="text-align: left;">201</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusBadRequest</code></td>
+                           <td style="text-align: left;">400</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusUnauthorized</code></td>
+                           <td style="text-align: left;">401</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusForbidden</code></td>
+                           <td style="text-align: left;">403</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusNotFound</code></td>
+                           <td style="text-align: left;">404</td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: left;"><code>Response::StatusInternalServerError</code></td>
+                           <td style="text-align: left;">500</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <form class=md-feedback name=feedback hidden>
+                     <fieldset>
+                        <legend class=md-feedback__title> Was this page helpful? </legend>
+                        <div class=md-feedback__inner>
+                           <div class=md-feedback__list> <button class="md-feedback__icon md-icon" type=submit title="This page was helpful" data-md-value=1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                                    <path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81" />
+                                 </svg> </button> <button class="md-feedback__icon md-icon" type=submit title="This page could be improved" data-md-value=0> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+                                    <path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14" />
+                                 </svg> </button> </div>
+                           <div class=md-feedback__note>
+                              <div data-md-value=1 hidden> Thanks for your feedback! </div>
+                              <div data-md-value=0 hidden> Thanks for your feedback! Help us improve this page by <a href="https://github.com/dconco/phpspa/issues/new/?title=[Docs%20Feedback]%20Response%20API%20Reference%20-%20/references/response/" target=_blank rel=noopener>telling us what you need</a>. </div>
+                           </div>
+                        </div>
+                     </fieldset>
+                  </form>
+               </article>
+            </div>
+            <script>var tabs = __md_get("__tabs"); if (Array.isArray(tabs)) e: for (var set of document.querySelectorAll(".tabbed-set")) { var labels = set.querySelector(".tabbed-labels"); for (var tab of tabs) for (var label of labels.getElementsByTagName("label")) if (label.innerText.trim() === tab) { var input = document.getElementById(label.htmlFor); input.checked = !0; continue e } }</script>
+            <script>var target = document.getElementById(location.hash.slice(1)); target && target.name && (target.checked = target.name.startsWith("__tabbed_"))</script>
+         </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24">
+               <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z" />
+            </svg> Back to top </button>
+      </main>
+      <footer class=md-footer>
+         <div class="md-footer-meta md-typeset">
+            <div class="md-footer-meta__inner md-grid">
+               <div class=md-copyright>
+                  <div class=md-copyright__highlight> Copyright &copy; 2025 <a href=https://github.com/dconco target=_blank rel=noopener>Dave Conco</a>. All rights reserved. </div>
+               </div>
+               <div class=md-social> <a href=https://github.com/dconco/phpspa target=_blank rel=noopener title="GitHub Repository" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path
+                           d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2" />
+                     </svg> </a> <a href=https://x.com/dave_conco target=_blank rel=noopener title="Follow on Twitter" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3" />
+                     </svg> </a> <a href=https://chat.whatsapp.com/CFeGqXBMR7j2oLE1148A5f target=_blank rel=noopener title="Join PhpSPA Community" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6" />
+                     </svg> </a> <a href=https://youtube.com/@daveconco target=_blank rel=noopener title="YouTube Channel" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 576 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z" />
+                     </svg> </a> <a href=mailto:me@dconco.tech target=_blank rel=noopener title="Email Contact" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 512 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z" />
+                     </svg> </a> <a href=https://linkedin.com/in/dconco target=_blank rel=noopener title="LinkedIn Profile" class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.-->
+                        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z" />
+                     </svg> </a> </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <div class=md-dialog data-md-component=dialog>
+      <div class="md-dialog__inner md-typeset"></div>
+   </div>
+   <div class=md-progress data-md-component=progress role=progressbar></div>
+   <script id=__config
+      type=application/json>{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "search.highlight", "search.share", "search.suggest", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.tooltips", "content.tabs.link", "toc.follow", "toc.integrate", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+   <script src=../../assets/javascripts/bundle.f55a23d4.min.js></script>
+</body>
+
+</html>

@@ -69,12 +69,24 @@
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
+         <loc>https://phpspa.tech/references/dom-utilities/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
          <loc>https://phpspa.tech/references/file-import-utility/</loc>
          <lastmod>2025-10-15</lastmod>
     </url>
     <url>
+         <loc>https://phpspa.tech/references/preloading-component/</loc>
+         <lastmod>2025-12-18</lastmod>
+    </url>
+    <url>
          <loc>https://phpspa.tech/references/response/</loc>
          <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://phpspa.tech/references/router/</loc>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
          <loc>https://phpspa.tech/references/helpers/fmt/</loc>
@@ -83,6 +95,10 @@
     <url>
          <loc>https://phpspa.tech/references/hooks/use-fetch/</loc>
          <lastmod>2025-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://phpspa.tech/references/hooks/clients/use-effect/</loc>
+         <lastmod>2025-12-18</lastmod>
     </url>
     <url>
          <loc>https://phpspa.tech/requests/</loc>
